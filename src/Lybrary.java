@@ -47,14 +47,12 @@ class Book {
     }
 
     public String getBookInfo(){
-        return "Title: " + title + ", Author: " + author + ", Year Published: " + yearPublished;
+        return " Title: " + title + "\n Author: " + author + "\n Year Published: " + yearPublished;
     }
 
     public void printBookDetails() {
         System.out.println("Book Details:");
-        System.out.println("Title: " + title);
-        System.out.println("Author: " + author);
-        System.out.println("Year Published: " + yearPublished);
+        System.out.println(getBookInfo());
     }
 }
 
@@ -77,11 +75,11 @@ class PrintedBook extends Book{
     }
 
     public String getBookInfo() {
-        return super.getBookInfo() + ", Number of Pages: " + numberOfPages + ", Publisher: " + publisher;
+        return super.getBookInfo() + "\n Number of Pages: " + numberOfPages + "\n Publisher: " + publisher + "\n Price: " + price;
     }
 
     public void printBookDetails() {
-        System.out.println("Printed Book Info:\n" + "Title: " + getTitle() + "\n" + "Author: " + getAuthor() + "\n" + "Year Published: " + getYearPublished() + "\n" + "Publisher: " + publisher + "\n" + "Number of Pages: " + numberOfPages + "\n" + "Book Type: PrintedBook");
+        System.out.println("Printed Book Info:\n" + getBookInfo() + "\n" + " Book Type: PrintedBook");
     }
 
     public void bookType() {
@@ -118,11 +116,11 @@ class EBook extends Book{
     }
 
     public String getBookInfo() {
-        return super.getBookInfo() + ", File Size: " + fileSizeMB + "File Format: " + fileFormat;
+        return super.getBookInfo() + "\n File Size: " + fileSizeMB + "\n File Format: " + fileFormat + "\n Price: " + price;
     }
 
     public void printBookDetails() {
-        System.out.println("EBook Info:\n" + "Title: " + getTitle() + "\n" + "Author: " + getAuthor() + "\n" + "Year Published: " + getYearPublished() + "\n" + "File Size: " + fileSizeMB + "MB\n" + "File Format: " + fileFormat + "\n" + "Book Type: EBook");
+        System.out.println("EBook Info:\n" + getBookInfo() + "\n" + " Book Type: EBook");
     }
 
     public void bookType() {
